@@ -21,8 +21,6 @@ class Room(models.Model):
     """
     The model representing a group of students
     """
-    # The Room's users who have administrative rights
-    owners = models.ManyToManyField(User)
     # The Room's users who are just listening
     listeners = models.ManyToManyField(User)
     # The preferences for the Room
