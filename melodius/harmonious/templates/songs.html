@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST"  action="/songs/">
+        {% csrf_token %}
+        {{ song_form }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Songs</h2>
+    {% for song in songs %}
+        {{ song }}
+        <br>
+    {% empty %}
+        <p>No songs</p>
+    {% endfor %}
+</body>
+</html>

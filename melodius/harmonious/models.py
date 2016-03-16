@@ -40,6 +40,9 @@ class Song(models.Model):
     album = models.ForeignKey('Album',
                               null=True)
 
+    def __str__(self):
+        return self.title.__str__() + ' ' + self.artist.__str__()
+
 
 class Album(models.Model):
     """
