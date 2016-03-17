@@ -39,6 +39,8 @@ class Song(models.Model):
     # The Album the Song belongs to
     album = models.ForeignKey('Album',
                               null=True)
+    # The Song's priority
+    priority = models.IntegerField(null=True)
 
     def __str__(self):
         return self.title.__str__() + ' ' + self.artist.__str__()
